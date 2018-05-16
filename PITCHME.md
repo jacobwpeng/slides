@@ -1,6 +1,5 @@
-@div[right-50]
+@title[This is the title]
 ### Line show one by one
-@divend
 
 @div[left-50]
 @ul
