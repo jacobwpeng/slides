@@ -1,16 +1,4 @@
-Hello!
-
-+++
-
-Hola!
-
----
-
-Goodbye!
-
-+++
-
-Adiós!
+@fa[thumbs-up](Adiós!)
 
 ---?code=code/TimerManager.h&title=TimerManager Example&color=black
 @title[Timer Manager]
