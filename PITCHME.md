@@ -6,7 +6,7 @@
 
 @olend
 
----?code=code/TimerManager.h&title=TimerManager Example&color=black
+---?code=code/TimerManager.h&title=TimerManager Example
 @title[Timer Manager]
 
 @[23-25](Typedefs.)
