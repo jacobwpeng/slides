@@ -30,3 +30,15 @@
 @[23](生成元数据)
 @[25-38](基础使用)
 @[40-55](进阶用法)
+
+---?code=code/boost_multi_index.cc&title=boost::multi_index
+@title[boost::multi_index]
+
+@[26-31](结构定义)
+@[75-108](普通实现内部结构)
+@[35-47](Add方法)
+@[53-72](区间查找)
+@[133-160](boost::multi_index实现)
+@[115-117](Add方法)
+@[120-129](区间查找)
+@[122](View)
