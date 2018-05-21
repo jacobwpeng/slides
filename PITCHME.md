@@ -26,7 +26,7 @@
 ---?code=code/boost_fusion.cc&title=boost::fusion
 @title[boost::fusion]
 
-@[18](结构定义)
+@[18-21](结构定义)
 @[23](生成元数据)
 @[25-38](基础使用)
 @[40-55](进阶用法)
