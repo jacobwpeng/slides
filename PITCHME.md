@@ -1,12 +1,3 @@
-
-[comment]: # @ol
-[comment]: # 
-[comment]: # - Plain text list item
-[comment]: # - Rich **markdown** list *item*
-[comment]: # - Link [within](https://gitpitch.com) list item
-[comment]: # 
-[comment]: # @olend
-
 ---?code=code/boost_optional_example.cc&title=boost::optional
 @title[boost::optional]
 
