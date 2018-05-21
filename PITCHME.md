@@ -14,3 +14,11 @@
 @[38-48](统一的遍历方式)
 @[50-61](BOOST_AUTO和BOOST_FOREACH结合)
 @[63-69](C++11)
+
+---?code=code/boost_local_function.cc&title=BOOST_LOCAL_FUNCTION
+@title[BOOST_LOCAL_FUNCTION]
+
+@[19-25](结构定义)
+@[31-43](普通排序方式)
+@[45-56](通过boost::bind绑定排序)
+@[58-66](通过BOOST_LOCAL_FUNCTION排序)
