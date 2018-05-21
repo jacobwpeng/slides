@@ -22,3 +22,11 @@
 @[31-43](普通排序方式)
 @[45-56](通过boost::bind绑定排序)
 @[58-66](通过BOOST_LOCAL_FUNCTION排序)
+
+---?code=code/boost_fusion.cc&title=boost::fusion
+@title[boost::fusion]
+
+@[18](结构定义)
+@[23](生成元数据)
+@[25-38](基础使用)
+@[40-55](进阶用法)
