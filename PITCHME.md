@@ -34,11 +34,15 @@
 ---?code=code/boost_multi_index.cc&title=boost::multi_index
 @title[boost::multi_index]
 
-@[26-31](结构定义)
-@[75-108](普通实现内部结构)
-@[35-47](Add方法)
-@[53-72](区间查找)
-@[133-160](boost::multi_index实现)
-@[115-117](Add方法)
-@[120-129](区间查找)
-@[122](View)
+@[28-33](结构定义)
+@[77-110](普通实现内部结构)
+@[37-49](Add方法)
+@[55-74](区间查找)
+@[146-174](boost::multi_index实现)
+@[146-150](tags)
+@[152-154](ordered_unique)
+@[156-158](hashed_unique)
+@[160-162](hashed_unique)
+@[117-120](Add方法)
+@[122-130](区间查找)
+@[133-143](排名查找)

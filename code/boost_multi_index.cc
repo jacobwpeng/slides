@@ -15,6 +15,7 @@
 #include <stdint.h>
 #include <vector>
 #include <set>
+#include <boost/optional.hpp>
 #include <boost/lambda/lambda.hpp>
 #include <boost/typeof/typeof.hpp>
 #include <boost/multi_index_container.hpp>
@@ -22,6 +23,7 @@
 #include <boost/multi_index/indexed_by.hpp>
 #include <boost/multi_index/ordered_index.hpp>
 #include <boost/multi_index/hashed_index.hpp>
+#include <boost/multi_index/ranked_index.hpp>
 
 struct Entry {
   uint64_t id;         // 唯一
@@ -128,6 +130,18 @@ class MultiIndexRankMap {
     return entries;
   }
 
+  boost::optional<Entry> FindByScoreRank(size_t rank) const {
+    BOOST_AUTO(const& view, s.get<ByScore>());
+    BOOST_AUTO(it, view.nth(rank));
+    // const InternalSet::index<ByScore>::type& view = s.get<ByScore>();
+    // InternalSet::index<ByScore>::type::iterator it = view.nth(rank);
+    if (it == view.end()) {
+      return boost::none;
+    }
+
+    return *it;
+  }
+
  private:
   // tags
   struct ByID {};
@@ -143,8 +157,8 @@ class MultiIndexRankMap {
                              bmi::member<Entry, uint64_t, &Entry::uin> >
       IndexByUin;
 
-  typedef bmi::ordered_non_unique<bmi::tag<ByScore>,
-                                  bmi::member<Entry, uint64_t, &Entry::score> >
+  typedef bmi::ranked_non_unique<bmi::tag<ByScore>,
+                                 bmi::member<Entry, uint64_t, &Entry::score> >
       IndexByScore;
 
   typedef bmi::ordered_non_unique<
@@ -155,9 +169,9 @@ class MultiIndexRankMap {
   typedef boost::multi_index_container<
       Entry,
       bmi::indexed_by<IndexByID, IndexByUin, IndexByScore, IndexByTimestamp> >
-      internalSet;
+      InternalSet;
 
-  internalSet s;
+  InternalSet s;
 };
 
 int main() {}
